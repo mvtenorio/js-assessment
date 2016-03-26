@@ -30,12 +30,7 @@ exports.functionsAnswers = {
   },
 
   useArguments : function() {
-    var sum = 0;
-
-    for (var i = 0; i < arguments.length; i++) {
-      sum += arguments[i];
-    }
-    return sum;
+    return [].reduce.call(arguments, (a, b) => a + b);
   },
 
   callIt : function(fn) {
